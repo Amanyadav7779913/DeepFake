@@ -1,0 +1,11 @@
+[2026-04-17 21:54:30] INFO train_cls — Device: cuda
+[2026-04-17 21:54:31] INFO train_cls — Loaders found: ['train', 'val', 'test']
+[2026-04-17 21:54:34] INFO train_cls — Model trainable params: 88,551,809
+[2026-04-17 21:54:35] INFO train_cls — Datasets: ['../../../d2']
+[2026-04-17 21:54:35] INFO train_cls — Starting supervised fine-tuning …
+[2026-04-17 21:54:35] INFO train_cls — Training complete. Best AUC: 0.0000
+[2026-04-17 21:54:35] INFO train_cls — Best model: ./eval_d3_on_d2/best_model.pth
+[2026-04-17 21:54:35] INFO train_cls — Starting final evaluation on 'test' set…
+[2026-04-17 21:54:35] INFO train_cls — Evaluation-only mode: using current weights (no reload).
+[2026-04-17 21:55:09] INFO train_cls — FINAL TEST RESULTS | Loss: 1.4788 | Acc: 0.534 | AUC: 0.571
+[2026-04-17 21:55:09] INFO train_cls — Training curves saved to ./eval_d3_on_d2

@@ -1,0 +1,23 @@
+[2026-04-22 18:08:12] INFO evaluate — Model loaded from ./checkpoints/classifier_d2/best_model.pth
+[2026-04-22 18:10:27] INFO evaluate — ==================================================
+[2026-04-22 18:10:27] INFO evaluate —   Split     : test
+[2026-04-22 18:10:27] INFO evaluate —   Samples   : 20000 (10000 real, 10000 fake)
+[2026-04-22 18:10:27] INFO evaluate —   Accuracy  : 0.8992
+[2026-04-22 18:10:27] INFO evaluate —   AUC-ROC   : 0.9658
+[2026-04-22 18:10:27] INFO evaluate —   F1        : 0.9029
+[2026-04-22 18:10:27] INFO evaluate —   EER       : 0.0959  (threshold=0.7328)
+[2026-04-22 18:10:27] INFO evaluate —   Youden's J: 0.8112  (threshold=0.6905)
+[2026-04-22 18:10:27] INFO evaluate — ==================================================
+[2026-04-22 18:10:27] INFO evaluate — 
+              precision    recall  f1-score   support
+
+        Real       0.93      0.86      0.90     10000
+        Fake       0.87      0.94      0.90     10000
+
+    accuracy                           0.90     20000
+   macro avg       0.90      0.90      0.90     20000
+weighted avg       0.90      0.90      0.90     20000
+
+[2026-04-22 18:10:27] INFO evaluate — Metrics saved → ./eval_xhulu_results/metrics_test.json
+[2026-04-22 18:10:27] INFO evaluate — 
+All results saved to: ./eval_xhulu_results

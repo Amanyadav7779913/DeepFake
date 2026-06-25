@@ -1,0 +1,23 @@
+[2026-04-22 17:59:32] INFO evaluate — Model loaded from ./checkpoints/classifier_d2/best_model.pth
+[2026-04-22 18:00:07] INFO evaluate — ==================================================
+[2026-04-22 18:00:07] INFO evaluate —   Split     : test
+[2026-04-22 18:00:07] INFO evaluate —   Samples   : 5226 (2603 real, 2623 fake)
+[2026-04-22 18:00:07] INFO evaluate —   Accuracy  : 0.9064
+[2026-04-22 18:00:07] INFO evaluate —   AUC-ROC   : 0.9695
+[2026-04-22 18:00:07] INFO evaluate —   F1        : 0.9102
+[2026-04-22 18:00:07] INFO evaluate —   EER       : 0.0882  (threshold=0.7578)
+[2026-04-22 18:00:07] INFO evaluate —   Youden's J: 0.8266  (threshold=0.7278)
+[2026-04-22 18:00:07] INFO evaluate — ==================================================
+[2026-04-22 18:00:07] INFO evaluate — 
+              precision    recall  f1-score   support
+
+        Real       0.94      0.87      0.90      2603
+        Fake       0.88      0.94      0.91      2623
+
+    accuracy                           0.91      5226
+   macro avg       0.91      0.91      0.91      5226
+weighted avg       0.91      0.91      0.91      5226
+
+[2026-04-22 18:00:07] INFO evaluate — Metrics saved → ./eval_d23_results/metrics_test.json
+[2026-04-22 18:00:07] INFO evaluate — 
+All results saved to: ./eval_d23_results

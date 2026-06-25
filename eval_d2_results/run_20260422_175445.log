@@ -1,0 +1,23 @@
+[2026-04-22 17:54:49] INFO evaluate — Model loaded from ./checkpoints/classifier_d2/best_model.pth
+[2026-04-22 17:55:24] INFO evaluate — ==================================================
+[2026-04-22 17:55:24] INFO evaluate —   Split     : test
+[2026-04-22 17:55:24] INFO evaluate —   Samples   : 5227 (2604 real, 2623 fake)
+[2026-04-22 17:55:24] INFO evaluate —   Accuracy  : 0.8647
+[2026-04-22 17:55:24] INFO evaluate —   AUC-ROC   : 0.9490
+[2026-04-22 17:55:24] INFO evaluate —   F1        : 0.8719
+[2026-04-22 17:55:24] INFO evaluate —   EER       : 0.1261  (threshold=0.7806)
+[2026-04-22 17:55:24] INFO evaluate —   Youden's J: 0.7549  (threshold=0.8387)
+[2026-04-22 17:55:24] INFO evaluate — ==================================================
+[2026-04-22 17:55:24] INFO evaluate — 
+              precision    recall  f1-score   support
+
+        Real       0.91      0.81      0.86      2604
+        Fake       0.83      0.92      0.87      2623
+
+    accuracy                           0.86      5227
+   macro avg       0.87      0.86      0.86      5227
+weighted avg       0.87      0.86      0.86      5227
+
+[2026-04-22 17:55:24] INFO evaluate — Metrics saved → ./eval_d2_results/metrics_test.json
+[2026-04-22 17:55:24] INFO evaluate — 
+All results saved to: ./eval_d2_results

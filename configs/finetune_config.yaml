@@ -1,0 +1,57 @@
+# finetune_config.yaml
+# ─────────────────────
+# Phase 2: Supervised Fine-tuning Configuration
+
+# ── Data ──────────────────────────────────────
+data:
+  data_dir: "/path/to/labeled_data"   # must have train/val/test splits with real/ fake/
+  image_size: 224
+  num_workers: 4
+  use_fft: true
+
+# ── Model ─────────────────────────────────────
+model:
+  vit_model: "vit_base_patch16_224"
+  pretrained: true
+  shared_backbone: false    # independent RGB + FFT encoders
+  fusion_mode: "concat"     # "concat" | "attention"
+  freeze_layers: 8          # freeze first 8 ViT blocks initially
+  dropout: 0.3
+
+# ── SSL Initialisation ────────────────────────
+ssl:
+  checkpoint: "./checkpoints/ssl/best_ssl.pth"
+
+# ── Losses ────────────────────────────────────
+losses:
+  label_smoothing: 0.1
+  sup_con_weight: 0.2
+  pacl_weight: 0.1
+
+# ── Optimiser ─────────────────────────────────
+optimizer:
+  lr: 5.0e-5
+  lr_encoder_scale: 0.1    # encoder LR = lr * lr_encoder_scale
+  weight_decay: 0.01
+  betas: [0.9, 0.999]
+
+# ── Scheduler ─────────────────────────────────
+scheduler:
+  type: "cosine_warm_restarts"
+  T_0: 10
+  T_mult: 2
+
+# ── Training ──────────────────────────────────
+training:
+  epochs: 50
+  batch_size: 32
+  patience: 10          # early stopping
+  amp: true
+  output_dir: "./checkpoints/classifier"
+
+# ── Recommended Datasets ──────────────────────
+# Real:  FFHQ (https://github.com/NVlabs/ffhq-dataset)
+#        CelebA-HQ (https://github.com/tkarras/progressive_growing_of_gans)
+# Fake:  FaceForensics++ (https://github.com/ondyari/FaceForensics)
+#        CelebDF (https://github.com/yuezunli/celeb-deepfakeforensics)
+#        StyleGAN2/3 outputs

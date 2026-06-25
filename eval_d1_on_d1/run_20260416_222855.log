@@ -1,0 +1,7 @@
+[2026-04-16 22:28:55] INFO train_cls — Device: cuda
+[2026-04-16 22:28:57] INFO train_cls — Model trainable params: 88,551,809
+[2026-04-16 22:28:58] INFO train_cls — Datasets: ['../../../kaggle_dataset']
+[2026-04-16 22:28:58] INFO train_cls — Starting supervised fine-tuning …
+[2026-04-16 22:28:58] INFO train_cls — Training complete. Best AUC: 0.0000
+[2026-04-16 22:28:58] INFO train_cls — Best model: ./eval_d1_on_d1/best_model.pth
+[2026-04-16 22:28:58] INFO train_cls — Training curves saved to ./eval_d1_on_d1

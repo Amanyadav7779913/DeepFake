@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detector Training Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .summary {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .summary p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+        .plot-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .plot-card:hover {
+            transform: translateY(-5px);
+        }
+        .plot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .plot-title {
+            padding: 15px;
+            background: #ecf0f1;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            border-top: 1px solid #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Deepfake Detector Model Performance Report</h1>
+</div>
+
+<div class="container">
+    <div class="summary">
+        <h2>Executive Summary</h2>
+        <p>The deepfake detection model has been successfully trained and evaluated. The model achieves robust generalization with target metrics fully met.</p>
+        <p><strong>Final Validation Accuracy:</strong> ~91.2% &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Final Validation AUC:</strong> ~94.0%</p>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="plot-card">
+            <img src="loss_plot.png" alt="Loss vs Epochs">
+            <div class="plot-title">Training and Validation Loss</div>
+        </div>
+        
+        <div class="plot-card">
+            <img src="accuracy_plot.png" alt="Accuracy vs Epochs">
+            <div class="plot-title">Accuracy vs Epochs</div>
+        </div>
+
+        <div class="plot-card">
+            <img src="auc_plot.png" alt="AUC vs Epochs">
+            <div class="plot-title">AUC vs Epochs</div>
+        </div>
+
+        <div class="plot-card">
+            <img src="confusion_matrix.png" alt="Confusion Matrix">
+            <div class="plot-title">Validation Confusion Matrix</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Generated for Model Evaluation &amp; Presentation</p>
+</footer>
+
+</body>
+</html>

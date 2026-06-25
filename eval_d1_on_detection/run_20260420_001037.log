@@ -1,0 +1,11 @@
+[2026-04-20 00:10:37] INFO train_cls — Device: cuda
+[2026-04-20 00:10:37] INFO train_cls — Loaders found: ['test']
+[2026-04-20 00:10:40] INFO train_cls — Model trainable params: 88,551,809
+[2026-04-20 00:10:43] INFO train_cls — Datasets: ['../../detection_test_only_data']
+[2026-04-20 00:10:43] INFO train_cls — Starting supervised fine-tuning …
+[2026-04-20 00:10:43] INFO train_cls — Training complete. Best AUC: 0.0000
+[2026-04-20 00:10:43] INFO train_cls — Best model: ./eval_d1_on_detection/best_model.pth
+[2026-04-20 00:10:43] INFO train_cls — Starting final evaluation on 'test' set…
+[2026-04-20 00:10:43] INFO train_cls — Evaluation-only mode: using current weights (no reload).
+[2026-04-20 00:11:35] INFO train_cls — FINAL TEST RESULTS | Loss: 0.7186 | Acc: 0.748 | AUC: 0.885
+[2026-04-20 00:11:35] INFO train_cls — Training curves saved to ./eval_d1_on_detection
