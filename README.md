@@ -4,7 +4,7 @@ A production-ready, modular deepfake detection system using Vision Transformers 
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```
 Input Image (any resolution)
@@ -35,7 +35,7 @@ Input Image (any resolution)
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 deepfake_detector/
@@ -73,14 +73,14 @@ deepfake_detector/
 ├── configs/                 # YAML configuration files
 │   ├── ssl_config.yaml      # SSL pretraining config
 │   └── finetune_config.yaml # Fine-tuning config
-├── predict.py               # 🎯 Main inference entry point
+├── predict.py               # Main inference entry point
 ├── requirements.txt
 └── README.md                # This file
 ```
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -134,7 +134,7 @@ python evaluation/evaluate.py \
 
 ---
 
-## 📊 Expected Dataset Structure
+## Expected Dataset Structure
 
 ```
 data_root/
@@ -159,7 +159,7 @@ data_root/
 
 ---
 
-## 🧠 Novel Component: PACL
+## Novel Component: PACL
 
 **Patch-Level Artifact Consistency Learning** is a novel SSL signal specifically designed for deepfake detection:
 
@@ -172,7 +172,7 @@ PACL extracts ViT patch tokens, computes a pairwise similarity matrix, and appli
 
 ---
 
-## 🔬 SSL Training Details
+## SSL Training Details
 
 | Hyperparameter | Value |
 |---------------|-------|
@@ -187,7 +187,7 @@ PACL extracts ViT patch tokens, computes a pairwise similarity matrix, and appli
 
 ---
 
-## 📈 Performance Targets
+## Performance Targets
 
 | Dataset | AUC | Accuracy |
 |---------|-----|----------|
@@ -197,7 +197,7 @@ PACL extracts ViT patch tokens, computes a pairwise similarity matrix, and appli
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 - Python ≥ 3.8
 - PyTorch ≥ 2.0
